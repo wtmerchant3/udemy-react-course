@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> My First Web Page </title>
+    <meta name="description" content="Page Description Here" />
+    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <style type="text/css">
+        Body {
+            color: red;
+        }
+
+    </style>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Paragraph tags can create spaces between sections of text -->
+    <p>This is a Sample HTML Document. </p>
+    <p>This Javascript function will capitalize my name:</p>
+    <p>Enter your name: <input type="text" id="fname" onchange="myFunction()"> </p>
+
+    <!-- line tags puts text on a new line without having too much space. -->
+    <p>This is Line 1. <br> This is Line 2. </p>
+
+    <!-- If you want to add space between text on the same line, you'll need to use the &nbsp; tag. Spacebars, tabs, etc doesn't work.-->
+    <p>This is Line 1. <br> This is Line 2. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This is line 3.</p>
+</body>
+
+</html>
