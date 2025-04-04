@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Table Tutorial</title>
+    </head>
+    <body>
+<!-- Lecture 17 - Tables -->
+<!-- width attribute specifies width of the table, can be either % or pixel value, % = percent of the window it takes up -->
+<!-- cellpadding - amount of space between table cell contents and its border. -->
+<!-- cellspacing - amount of space between cells -->
+        <table width="100%" border="1" bordercolor="blue" cellpadding="2" cellspacing="2">
+            <tr>
+                <td>Sport</td>
+                <td>Response</td>
+            </tr>
+            <tr>
+                <td>Basketball</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Baseball</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>Hockey</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>Soccer</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>Tennis</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>Football</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Other</td>
+                <td>15</td>
+            </tr>
+        </table>
+
+        <br>
+        <br>
+        <br>
+
+
+        <!-- Lecture 19 - nested tables -->
+        <!-- Parent table  -->
+        <table width="600" border="1" bordercolor="red" cellspacing="2" cellpadding="2">
+            <tr>
+                <td>
+                    <!-- Child Table  -->
+                    <!-- The width setting will affect how much of the table is shown in the browser. If the parent table's width is 100% and the child table is 50% that means that the child table will take up 50% of the width of the parent table. -->
+                    <table width="100%" border="1" bordercolor="blue" cellpadding="2" cellspacing="2">
+                        <tr>
+                            <td>Sport</td>
+                            <td>Response</td>
+                        </tr>
+                        <tr>
+                            <td>Basketball</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>Baseball</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>Hockey</td>
+                            <td>26</td>
+                        </tr>
+                        <tr>
+                            <td>Soccer</td>
+                            <td>22</td>
+                        </tr>
+                        <tr>
+                            <td>Tennis</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td>Football</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Other</td>
+                            <td>15</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+         </table>
+
+        <br>
+        <br>
+        <br>
+
+         <!-- Lecture 20 - Merging cells -->
+         <h1>Table without merged cells</h1>
+         <table width="600" border="1">
+            <tr>
+                <td>My Expenses</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Month</td>
+                <td>Amount</td>
+            </tr>
+            <tr>
+                <td>January</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>$200</td>
+            </tr>
+        </table>
+
+
+        <h1>Table with merged cells</h1>
+         <table width="600" border="1">
+            <tr>
+                <!-- Colspan attribute determines how many columns a cell spans in a table -->
+                <td colspan="2">My Expenses</td>
+            </tr>
+            <tr>
+                <td>Month</td>
+                <td>Amount</td>
+            </tr>
+            <tr>
+                <td>January</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>$200</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+
+        <!-- Lesson 21 - Cell text wrapping -->
+        <!-- Cells with long text have text wrapping by default as shown below-->
+        <h1>Table with text wrapping</h1>
+        <table width="600" border="1">
+            <tr>
+                <td colspan="2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</td>
+            </tr>
+            <tr>
+                <td>Month</td>
+                <td>Amount</td>
+            </tr>
+            <tr>
+                <td>January</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>$200</td>
+            </tr>
+        </table>
+
+        <h1>Table without text wrapping</h1>
+        <table width="600" border="1">
+            <tr>
+                <!-- The nowrap attribute is used to remove text wrapping from a cell -->
+                <td colspan="2" nowrap>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</td>
+            </tr>
+            <tr>
+                <td>Month</td>
+                <td>Amount</td>
+            </tr>
+            <tr>
+                <td>January</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>$200</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+
+        <!-- Lecture 22 - Table background image -->
+        <!-- Background attribute can be added to entire table by using the background attribute -->
+         <h1> background for entire table </h1>
+        <table background="tablebg.jpg" width="600" border="1">
+           <tr>
+               <td colspan="2">My Expenses</td>
+           </tr>
+           <tr>
+               <td>Month</td>
+               <td>Amount</td>
+           </tr>
+           <tr>
+               <td>January</td>
+               <td>$100</td>
+           </tr>
+           <tr>
+               <td>February</td>
+               <td>$100</td>
+           </tr>
+           <tr>
+               <td>Total</td>
+               <td>$200</td>
+           </tr>
+       </table>
+
+       <!-- Or it can be applied for a single cell like below -->
+       <h1> background for a cell </h1>
+       <table width="600" border="1">
+          <tr>
+              <td colspan="2">My Expenses</td>
+          </tr>
+          <tr>
+              <td>Month</td>
+              <td background="tablebg.jpg">Amount</td>
+          </tr>
+          <tr>
+              <td>January</td>
+              <td>$100</td>
+          </tr>
+          <tr>
+              <td>February</td>
+              <td>$100</td>
+          </tr>
+          <tr>
+              <td>Total</td>
+              <td>$200</td>
+          </tr>
+      </table>
+
+       <br>
+       <br>
+       <br>
+
+
+       <!-- Lecture 23 - Table Cell Alignment-->
+        <h1> Table Cell Alignment </h1>
+        <!-- td align attribute is used to align cell content  -->
+        <table width="600" border="1">
+           <tr>
+               <td colspan="2">My Expenses</td>
+           </tr>
+           <tr>
+               <td>Month</td>
+               <td>Amount</td>
+           </tr>
+           <tr>
+               <td>January</td>
+               <td align="right">$100</td>
+           </tr>
+           <tr>
+               <td>February</td>
+               <td align="center">$100</td>
+           </tr>
+           <tr>
+               <td>Total</td>
+               <td>$200</td>
+           </tr>
+       </table>
+
+       <br>
+       <br>
+       <br>
+    </body>
+</html>
