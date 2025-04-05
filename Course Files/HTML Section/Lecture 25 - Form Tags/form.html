@@ -10,46 +10,80 @@
 
 <body>
 
+  <!-- lecture 25 to 31 - form tags and attributes -->
+   <!-- action determines how the server should process the data after form submission -->
+  <form name="employment" action="send.php" method="post">
+    <table width="600"  cellspacing="2" cellpadding="2">
+      <tr>
+        <td>Employment Application</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>First Name:</td>
+        <td><input type="text" name="fname" maxlength="50"/></td>
+      </tr>
+      <tr>
+        <td>Last Name:</td>
+        <td><input type="text" name="lname" maxlength="50"/></td>
+      </tr>
+      <tr>
+        <td>Position:</td>
+        <td>
+          <select name="position">
+            <!-- for option tags, the value option is what is stored in the db by the php script. In this example, we're saying that the script only allows two characters per value, so that is why the values look like this  -->
+            <option value="AC">Accountant</option>
+            <option value="RE">Receptionist</option>
+            <option value="AD">Administrator</option>
+            <option value="SU">Supervisor</option>
 
- <table width="600" border="1" cellspacing="2" cellpadding="2">
-    <tr>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-    </tr>
-  </table>
-
-
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Experience Level:</td>
+        <td>
+          <select name="experience">
+            <option value="EN">Entry Level</option>
+            <option value="SO">Some Experience</option>
+            <option value="VE">Very Experienced</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Job Type:</td>
+        <td>
+          <!-- Checkboxes can have different name values so that each of them can be individually cheked from one another -->
+          <input type="checkbox" name="ft"/>Full Time
+          <input type="checkbox" name="pt"/>Part Time
+          <input type="checkbox" name="ct"/>Contract
+        </td>
+      </tr>
+      <tr>
+        <td>Employment Status</td>
+        <td>
+          <!-- For Radio buttons, giving them the same "name" value ensures that only one of the radios can be selected at a time -->
+          <input type="radio" name="estatus" value="employed"/>Employed
+          <input type="radio" name="estatus" value="unemployed"/>Unemployed
+          <input type="radio" name="estatus" value="student"/>Student
+        </td>
+      </tr>
+      <tr>
+        <td>Additional Comments:</td>
+        <td>
+          <!-- cols and rows attributes specify the initial height and width of the textarea  -->
+          <textarea name="comments" cols="45" rows="5"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <!-- This button submits the form -->
+          <input type="submit" name="submit" value="Submit">
+          <!-- This button resets the form -->
+          <input type="reset" name="reset" value="Reset"> 
+        </td>
+      </tr>
+    </table>
+  </form>
 </body>
 </html>
