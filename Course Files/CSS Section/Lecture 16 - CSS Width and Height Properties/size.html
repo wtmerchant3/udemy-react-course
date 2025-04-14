@@ -8,9 +8,21 @@
 		<style>
 		
 			#div1 {
+			/*setting width to auto means that the div will automatically scale to the size of its container
+			in this case, since theres no div around it, it scales to the size of the window. You'll need to
+			get rid of max-width for this to work though. */
+			width: auto;
+			/* min width sets the smallest width that an element can be. If the browser is smaller than this width a vieport will appear */
+			min-width: 600px;
+			/* max width is similar to min widht just with a max value */
+			/* max-width: 800px; */
+			/* There is also a max height and min height declaration similarly to the min and max width declarations */
+			/* height: 500px; */
 			
-			width: 100%;
-			height: 500px;
+			/* Setting height to 100% won't work, as it won't display the div at all. In order to 
+			get the element to display the full width of the device's viewport, you need to user the 
+			vh unit value show below. THis is the same for any percentage value for height.*/
+			height: 100vh;
 			background-color: blue;
 			
 			}
