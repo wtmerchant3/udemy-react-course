@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CSS Web Page</title>
+    
+        <style>
+            /* Lecture 67 CSS Project CSS Rules */
+            body{
+                margin: 0;
+                padding: 0;
+                line-height: 1.5em;
+            }
+            #header{
+                background: black;
+                font-family: Arial;
+                height: 100px;
+            }
+            /* Contains the three columns in the middle of the page */
+            /* float is included so that the footer can clear the content in the middle of the page */
+            #contentwrapper{
+                float: left;
+                width: 100%
+            }
+            #contentcolumn{
+                /* left and right columns will be a fixed 230px at all times */
+                /* this rule is for the middle column */
+                margin: 0 230px 0 230px;
+            }
+            #leftcolumn{
+                float: left;
+                width: 230px;
+                margin-left: -100%;
+                background: #24c8ff
+            }
+            #rightcolumn{
+                float: left;
+                width: 230px;
+                margin-left: -230px;
+                background: #FFFB00
+            }
+            .innertext{
+                margin: 20px;
+                font-family: Arial;
+                color: #5e5e5e;
+            }
+            #footer{
+                clear: left; /* Cannot float on left */
+                width: 100%;
+                background: black;
+                color: #FFFFFF;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                padding: 4px;
+            }
+
+            /* Lecture 68 CSS Project Navigation Rules */
+            ul{
+                list-style-type: none; /* Gets rid of bullets or any marker before the list items */ 
+                margin: 0;
+                padding: 0;
+                background-color: #000;
+            }
+            li {
+                float: left;
+                border-right: 1px solid #bbb;
+            }
+            li:last-child{
+                /* Makes it so that the last list item doesn't have a border on the right side */
+                border-right: none;
+            }
+            li a{
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            /* Changes the background when hovering over links that aren't active. */
+            li a:hover:not(.active){
+                background-color: #808080
+            }
+            /* Sets the background color for the currently active link, which would be the home link. */ 
+            .active{
+                background-color: #0099ff;
+            }
+        </style>
+    </head>
+    <body>
+        
+    </body>
+</html>
