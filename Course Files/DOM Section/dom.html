@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Lecture 72 Manipulating the DOM -->
+        <title>My First Web Page </title>
+    </head>
+    <body>
+        <script>
+            // Changes the innerText of whatever element id is to "New Text" (I modified it to check the innerHTML value and change the text depending on what the value is)
+            function changeText(id) {
+                if(id.innerHTML === "Click here"){
+                    id.innerHTML = "New Text";
+                }
+                else{
+                    id.innerHTML = "Click here";
+                }
+            }
+        </script>
+        
+        <!-- When this h1 is clicked, the text will change from "Click here" to "New Text" -->
+        <h1 onclick="changeText(this)">Click here</h1>
+    </body>
+</html>
